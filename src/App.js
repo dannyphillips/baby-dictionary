@@ -3,25 +3,46 @@ import fire from './fire';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { messages: [] }; // <- set up react state
+  constructor() {
+    super();
+    this.state = {
+      dictionary: [],
+      word: ''
+    };
   }
-  componentWillMount() {
-    /* Create reference to messages in Firebase Database */
-    let messagesRef = fire.database().ref('messages').orderByKey().limitToLast(100);
-    messagesRef.on('child_added', snapshot => {
-      /* Update React state when message is added at Firebase Database */
-      let message = { text: snapshot.val(), id: snapshot.key };
-      this.setState({ messages: [message].concat(this.state.messages) });
+
+  componentDidMount() {
+    this.getDictionary();
+  }
+
+  updateInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  async getDictionary() {
+    const snapshot = await fire.firestore().collection('baby_words').get()
+    const dictionary = snapshot.docs.map(doc => doc.data());
+    this.setState({
+      dictionary: dictionary
     })
   }
-  addMessage(e) {
-    e.preventDefault(); // <- prevent form submit from reloading the page
-    /* Send the message to Firebase */
-    fire.database().ref('messages').push(this.inputEl.value);
-    this.inputEl.value = ''; // <- clear the input
-  }
+
+  addWord = e => {
+    e.preventDefault();
+    const db = fire.firestore();
+    db.collection("baby_words").add({
+      _baby: "babies/noah-phillips",
+      timestamp: Date(),
+      word: this.state.word
+    });
+    this.setState({
+      word: '',
+      dictionary: this.state.dictionary
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -29,15 +50,17 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <form onSubmit={this.addMessage.bind(this)}>
-            <input type="text" ref={el => this.inputEl = el} />
-            <input type="submit" />
-            <ul>
-              { /* Render the list of messages */
-                this.state.messages.map(message => <li key={message.id}>{message.text}</li>)
-              }
-            </ul>
+          <form onSubmit={this.addWord.bind(this)}>
+            <input
+              type="text"
+              name="word"
+              placeholder="Enter a word"
+              onChange={this.updateInput}
+              value={this.state.word}
+            />
+            <button type="submit">Submit</button>
           </form>
+          {this.state.dictionary.map((obj) => <li key={obj.word}>{obj.word}</li>)}
         </header>
       </div>
     );
