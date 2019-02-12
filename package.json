@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.8.2",
+    "randomcolor": "^0.5.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-tag-cloud": "^1.2.0"
   },
   "devDependencies": {
     "firebase-tools": "^6.3.1"
