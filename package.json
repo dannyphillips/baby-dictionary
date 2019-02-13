@@ -5,8 +5,8 @@
   "dependencies": {
     "firebase": "^5.8.2",
     "randomcolor": "^0.5.3",
-    "rc-slider": "^8.6.5",
     "react": "^16.8.1",
+    "react-compound-slider": "^0.20.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5",
     "react-tag-cloud": "^1.2.0"
