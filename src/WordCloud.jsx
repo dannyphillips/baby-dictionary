@@ -2,11 +2,13 @@ import React from 'react'
 import randomColor from "randomcolor";
 import TagCloud from "react-tag-cloud";
 
+import "./WordCloud.css";
+
 const styles = {
   large: {
     fontSize: 60,
     fontWeight: "bold",
-    color: randomColor()
+    color: "white",
   },
   small: {
     opacity: 0.7,
@@ -29,7 +31,7 @@ const WordCloud = ({dictionary}) => {
           }}
         >
           {dictionary.map(obj => (
-            <div style={styles.large} key={obj.word}>{obj.word}</div>
+            <div style={styles.large} key={obj.text}>{obj.text}</div>
           ))}
         </TagCloud>
       </div>

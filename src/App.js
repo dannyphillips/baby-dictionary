@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from './Header'
 import WordCloud from './WordCloud'
+import SidePane from './SidePane'
 
 class App extends Component {
   constructor() {
@@ -54,7 +55,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header word={this.state.word} updateInput={this.updateInput} addWord={this.addWord}/>
-        <WordCloud dictionary={this.state.dictionary}/>
+        <div className="container">
+          <WordCloud dictionary={this.state.dictionary}/>
+          <SidePane dictionary={this.state.dictionary} selectedWord={{name: "mama", timestamp: Date()}}/>
+        </div>
       </div>
     );
   }

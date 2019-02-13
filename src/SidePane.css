@@ -1,0 +1,13 @@
+.pane {
+  width: 400px;
+  height: 100%;
+}
+.count {
+  font-size: 128px;
+  padding: 40px;
+}
+.info {
+  text-align: left;
+  padding: 20px;
+  margin: 50px;
+}
