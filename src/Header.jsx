@@ -1,5 +1,8 @@
 import React from 'react'
+import Slider from 'rc-slider'
 import "./Header.css";
+
+const Range = Slider.Range;
 
 const header = ({updateInput, word, addWord}) => {
   return (
@@ -9,6 +12,9 @@ const header = ({updateInput, word, addWord}) => {
         <h1 className="title">Baby Dictionary</h1>
       </div>
       <div className="right">
+        <div className="range">
+          <Range allowCross={false} defaultValue={[0, 20]} onChange={""} />
+        </div>
         <form onSubmit={addWord}>
           <input
             className="input"

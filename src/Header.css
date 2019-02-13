@@ -30,6 +30,11 @@
   flex-direction: row;
   align-items: center;
 }
+.range {
+  width: 400px;
+  margin: 50px;
+  height: 50px;
+}
 
 .input {
   height: 40px;
