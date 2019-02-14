@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  setup:
+  build:
     working_directory: ~/baby-dictionary
     docker:
       - image: circleci/node:latest
@@ -21,6 +21,6 @@ jobs:
       - run:
           name: Build App
           command: npm run build
-      - deploy:
+      - run:
           name: Deploy to Firebase
           command: npm run deploy
