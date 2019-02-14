@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from './Header'
 import WordCloud from './WordCloud'
+import Graph from './Graph'
 import SidePane from './SidePane'
 
 class App extends Component {
@@ -62,7 +63,12 @@ class App extends Component {
       <div className="App">
         <Header word={this.state.word} updateInput={this.updateInput} addWord={this.addWord} handleSwitch={this.handleSwitch} checked={this.state.checked}/>
         <div className="container">
-          <WordCloud dictionary={this.state.dictionary}/>
+          {
+            this.state.checked ?
+              <Graph dictionary={this.state.dictionary}/>
+            :
+              <WordCloud dictionary={this.state.dictionary}/>
+          }
           <SidePane dictionary={this.state.dictionary} selectedWord={{name: "mama", timestamp: Date()}}/>
         </div>
       </div>

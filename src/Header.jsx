@@ -7,7 +7,7 @@ const Header = ({updateInput, handleSwitch, checked, word, addWord}) => {
   return (
     <header className="App-header">
       <div className="left">
-        <img className="logo" src="logo.png"></img>
+        <img className="logo" src="logo.png" alt="logo"></img>
         <h1 className="title">Baby Dictionary</h1>
       </div>
       <div className="right">
