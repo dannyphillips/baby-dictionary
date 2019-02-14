@@ -18,32 +18,9 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - persist_to_workspace:
-          root: ~/baby-dictionary
-
-  build_deploy:
-    working_directory: ~/baby-dictionary
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - attach_workspace:
-          at: ~/baby-dictionary
       - run:
-          name: Build
+          name: Build App
           command: npm run build
-      - run:
-          name: Deploy
+      - deploy:
+          name: Deploy to Firebase
           command: npm run deploy
-
-
-workflows:
-  version: 2
-  setup_build_deploy:
-    jobs:
-      - setup
-      - build_deploy:
-          requires:
-            - setup
-          filters:
-            branches:
-              only: master
