@@ -3,7 +3,7 @@ jobs:
   setup:
     working_directory: ~/baby-dictionary
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
@@ -21,7 +21,7 @@ jobs:
   build_deploy:
     working_directory: ~/baby-dictionary
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
