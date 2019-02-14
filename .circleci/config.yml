@@ -1,7 +1,7 @@
 version: 2
 jobs:
   setup:
-    working_directory: ~/baby-dictionary/workspace
+    working_directory: ~/baby-dictionary
     docker:
       - image: circleci/node:latest
     steps:
@@ -19,7 +19,7 @@ jobs:
           paths:
             - node_modules
       - persist_to_workspace:
-          root: workspace
+          root: /
 
   build_deploy:
     working_directory: ~/baby-dictionary
@@ -27,7 +27,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - attach_workspace:
-          at: ~/baby-dictionary/workspace
+          at: ~/baby-dictionary
       - run:
           name: Build
           command: npm run build
