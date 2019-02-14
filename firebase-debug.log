@@ -1,0 +1,27 @@
+[debug] [2019-02-14T22:54:58.054Z] ----------------------------------------------------------------------
+[debug] [2019-02-14T22:54:58.055Z] Command:       /Users/dannyphillips/.nvm/versions/node/v9.10.0/bin/node /Users/dannyphillips/.nvm/versions/node/v9.10.0/bin/firebase deploy
+[debug] [2019-02-14T22:54:58.055Z] CLI Version:   6.3.1
+[debug] [2019-02-14T22:54:58.056Z] Platform:      darwin
+[debug] [2019-02-14T22:54:58.056Z] Node Version:  v9.10.0
+[debug] [2019-02-14T22:54:58.056Z] Time:          Thu Feb 14 2019 14:54:58 GMT-0800 (PST)
+[debug] [2019-02-14T22:54:58.056Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-14T22:54:58.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-14T22:54:58.063Z] > authorizing via signed-in user
+[debug] [2019-02-14T22:54:58.063Z] [iam] checking project baby-dictionary for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-02-14T22:54:58.064Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/baby-dictionary:testIamPermissions  
+
+[debug] [2019-02-14T22:54:58.398Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-14T22:54:58.399Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/baby-dictionary  
+ 
+[debug] [2019-02-14T22:54:58.598Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'baby-dictionary'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-02-14T22:54:58.603Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/baby-dictionary/versions  
+
+[debug] [2019-02-14T22:54:59.191Z] <<< HTTP RESPONSE 200
+[info] i  hosting[baby-dictionary]: beginning deploy...
+[info] i  hosting[baby-dictionary]: found 15 files in build
+[debug] [2019-02-14T22:54:59.208Z] [hosting] hash cache [YnVpbGQ] load error: lines is not defined
