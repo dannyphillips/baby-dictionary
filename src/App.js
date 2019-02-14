@@ -11,8 +11,11 @@ class App extends Component {
     super();
     this.state = {
       dictionary: [],
-      word: ""
+      word: "",
+      checked: false,
     };
+    this.handleSwitch = this.handleSwitch.bind(this);
+
   }
 
   componentDidMount() {
@@ -50,11 +53,14 @@ class App extends Component {
       dictionary: this.state.dictionary
     });
   };
+  handleSwitch(checked) {
+    this.setState({ checked });
+  }
 
   render() {
     return (
       <div className="App">
-        <Header word={this.state.word} updateInput={this.updateInput} addWord={this.addWord}/>
+        <Header word={this.state.word} updateInput={this.updateInput} addWord={this.addWord} handleSwitch={this.handleSwitch} checked={this.state.checked}/>
         <div className="container">
           <WordCloud dictionary={this.state.dictionary}/>
           <SidePane dictionary={this.state.dictionary} selectedWord={{name: "mama", timestamp: Date()}}/>
