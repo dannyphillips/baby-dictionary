@@ -1,7 +1,7 @@
 version: 2
 jobs:
   setup:
-    working_directory: ~/baby-dictionary
+    working_directory: ~/baby-dictionary/workspace
     docker:
       - image: circleci/node:latest
     steps:
@@ -18,12 +18,16 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - persist_to_workspace:
+          root: workspace
+
   build_deploy:
     working_directory: ~/baby-dictionary
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
+      - attach_workspace:
+          at: ~/baby-dictionary/workspace
       - run:
           name: Build
           command: npm run build
