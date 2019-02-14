@@ -5,6 +5,7 @@
 .count {
   font-size: 128px;
   padding: 40px;
+  font-weight: bold;
 }
 .info {
   text-align: left;
