@@ -10,18 +10,12 @@
     "react": "^16.8.1",
     "react-compound-slider": "^1.2.2",
     "react-dom": "^16.8.6",
-<<<<<<< HEAD
     "react-scripts": "3.0.1",
-    "react-switch": "^4.0.1",
-    "react-tag-cloud": "^1.2.0"
-=======
-    "react-scripts": "2.1.5",
     "react-switch": "^5.0.0",
     "react-tag-cloud": "^1.3.2"
->>>>>>> c21cf20270988a12cb96511bc75d5d2faab8ab95
   },
   "devDependencies": {
-    "firebase-tools": "^6.3.1"
+    "firebase-tools": "^6.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
