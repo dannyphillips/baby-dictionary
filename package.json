@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/highcharts": "5.0.40",
+    "@types/highcharts": "5.0.41",
     "firebase": "6.2.3",
     "highcharts": "7.1.2",
     "highcharts-react-official": "2.2.2",
