@@ -8,7 +8,7 @@
     "highcharts": "7.1.2",
     "highcharts-react-official": "2.2.2",
     "react": "16.8.6",
-    "react-compound-slider": "1.2.2",
+    "react-compound-slider": "2.0.0",
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1",
     "react-switch": "5.0.0",
