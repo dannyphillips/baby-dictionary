@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/highcharts": "5.0.44",
-    "firebase": "6.6.1",
+    "firebase": "6.6.2",
     "highcharts": "7.2.0",
     "highcharts-react-official": "2.2.2",
     "react": "16.9.0",
