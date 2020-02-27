@@ -7,7 +7,7 @@
     "firebase": "7.9.1",
     "highcharts": "8.0.0",
     "highcharts-react-official": "2.2.2",
-    "react": "16.12.0",
+    "react": "16.13.0",
     "react-compound-slider": "2.5.0",
     "react-dom": "16.13.0",
     "react-scripts": "3.4.0",
