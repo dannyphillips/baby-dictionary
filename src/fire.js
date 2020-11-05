@@ -1,4 +1,7 @@
-import firebase from 'firebase/app'
+import "@firebase/app";
+import firebase from "@firebase/app";
+import "@firebase/firestore";
+
 var config = {
   apiKey: "AIzaSyDQFNuSna8jIFnhwnz5gdHuWlWKwB3mrBA",
   authDomain: "baby-dictionary.firebaseapp.com",
