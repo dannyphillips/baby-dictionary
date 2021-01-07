@@ -31,6 +31,6 @@
     "react-tag-cloud": "^1.3.2"
   },
   "devDependencies": {
-    "firebase-tools": "^9.1.0"
+    "firebase-tools": "^9.1.1"
   }
 }
