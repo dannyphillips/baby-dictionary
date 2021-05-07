@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "@types/highcharts": "^7.0.0",
-    "firebase": "^8.4.3",
+    "firebase": "^8.5.0",
     "highcharts": "^9.1.0",
     "highcharts-react-official": "^3.0.0",
     "react": "^16.14.0",
