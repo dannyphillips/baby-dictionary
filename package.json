@@ -21,7 +21,7 @@
   "dependencies": {
     "@types/highcharts": "^7.0.0",
     "firebase": "^8.9.1",
-    "highcharts": "^9.1.2",
+    "highcharts": "^9.2.0",
     "highcharts-react-official": "^3.0.0",
     "react": "^16.14.0",
     "react-compound-slider": "^3.3.1",
