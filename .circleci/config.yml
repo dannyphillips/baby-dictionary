@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/baby-dictionary
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:current
     steps:
       - checkout
       - restore_cache:
